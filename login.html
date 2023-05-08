@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+    <div class="main">
+        <div style="display: flex; justify-content: center; height: 90px; position: relative;">
+            <p style="bottom: 65px; left: 32px; position: absolute;">21:06</p>
+            <img src="images/battery.png" alt="" style="bottom: 55px; right: 8px; position: absolute; height: 35px; width: 110px;">
+        
+            <div style="display: flex; justify-content: space-between;  width: 134px; position: absolute; height: 26px; bottom: 70px;">
+                <div style="height: 26px; width: 100px; border: thin solid; border-radius: 20px; margin-top: 20px; background-color: rgb(56, 56, 56);"></div>
+                <div style="height: 26px; width: 26px; border: thin solid; border-radius: 20px; margin-top: 20px; background-color: rgb(56, 56, 56);"></div>
+            </div>
+
+        </div>
+        <div class="inner">
+            <h1>Welcome to Frazer</h1>
+            <p>Login to your account below, you dont have an account?</p>
+            <a href="index.html">
+                <p class="signup">
+                    SIGNUP
+                </p>
+            </a>
+            
+            <form>
+                
+                <div style="padding: 0 25px; margin-top: 0px;">
+                    <input type="text" placeholder="Email address" id="email">
+                    <input type="tel" placeholder="Phone number" id="tel">
+                    <input type="password" placeholder="Enter your password" id="ps">
+                </div>
+                <br>
+                <div style="display: flex; justify-content: center;">
+                    <button onclick="login()">Login</button>
+                </div>
+                <hr>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script>
+        let allUsers = JSON.parse(localStorage.getItem("localAllUsers"))
+        console.log(allUsers)
+        function login(){
+            window.location.href(profile.html)            
+        }
+
+        
+
+
+    </script>
+</body>
+</html>

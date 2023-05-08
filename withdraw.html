@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>withdraw</title>
+    <link rel="stylesheet" href="withdraw.css">
+</head>
+<body>
+    <div class="main">
+        <div style="display: flex; justify-content: center; height: 90px; position: relative;">
+            <p style="bottom: 65px; left: 32px; position: absolute;">21:06</p>
+            <img src="images/battery.png" alt="" style="bottom: 55px; right: 8px; position: absolute; height: 35px; width: 110px;">
+        
+            <div style="display: flex; justify-content: space-between;  width: 134px; position: absolute; height: 26px; bottom: 70px;">
+                <div style="height: 26px; width: 100px; border: thin solid; border-radius: 20px; margin-top: 20px; background-color: rgb(56, 56, 56);"></div>
+                <div style="height: 26px; width: 26px; border: thin solid; border-radius: 20px; margin-top: 20px; background-color: rgb(56, 56, 56);"></div>
+            </div>
+
+        </div>
+        <div class="inner">
+            <h1>withdraw Funds</h1>
+            <p>How much will you like to withdraw?</p>
+            
+                      
+            <div style="padding: 0 25px; margin-top: 30px;">
+                <input type="text" placeholder="$amount" id="amount" >
+            </div><br>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="sub()">withdraw</button>
+            </div>
+            <hr>
+            
+        </div>
+    </div>
+    
+
+    <script>
+        function sub(){
+            let firstNum = JSON.parse(localStorage.getItem(`localBalance`))
+            let secondNum = Number(amount.value)
+            let balance = Number(firstNum) - Number(secondNum)
+            localStorage.setItem(`localBalance`,JSON.stringify(balance))
+            window.location.href = `withdrawn.html`  
+        }
+    </script>
+</body>
+</html>

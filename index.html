@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div style="display: flex; justify-content: center; height: 90px; position: relative;">
+            <p style="bottom: 65px; left: 32px; position: absolute;">21:06</p>
+            <img src="images/battery.png" alt="" style="bottom: 55px; right: 8px; position: absolute; height: 35px; width: 110px;">
+        
+            <div style="display: flex; justify-content: space-between;  width: 134px; position: absolute; height: 26px; bottom: 70px;">
+                <div style="height: 26px; width: 100px; border: thin solid; border-radius: 20px; margin-top: 20px; background-color: rgb(56, 56, 56);"></div>
+                <div style="height: 26px; width: 26px; border: thin solid; border-radius: 20px; margin-top: 20px; background-color: rgb(56, 56, 56);"></div>
+            </div>
+
+        </div>
+
+        <div class="inner">
+            <h1>Welcome to Frazer</h1>
+            <p>signup below or if you have an account,</p>
+             <a href="login.html">
+                <p class="login">
+                    LOGIN
+                </p>
+             </a>   
+            <form class="form">
+                <div style="display: flex; justify-content: space-between; padding: 0 0 0 25px;">
+                    <input type="text" placeholder="First name" class="name" id="firstName">
+                    <input type="text" placeholder="Last name" class="name" id="lastName">
+                </div>
+                <div style="padding: 0 25px;">
+                    <input type="text" placeholder="Email address" id="emailAddress">
+                    <input type="number" placeholder="Phone number" id="phoneNum">
+                    <input type="password" placeholder="Create a password" id="password">
+                </div>
+                <div style="padding: 0 25px;">
+                    <input type="date" placeholder="" id="dateOfBirth">
+                    <select name="Gender" id="gender">
+                        <option value="">Gender</option>
+                        <option value="male" id="male">Male</option>
+                        <option value="female" id="female">Female</option>
+                    </select>
+                    <input type="password" placeholder="Create a transanction pin" id="pin">
+                </div>
+            </form>
+            <br>
+            <div style="display: flex; justify-content: center;">
+                <button onclick="signUp()">signup</button>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+
+    <script>
+        allUsers = []
+        let tele = /^[\d]{11}$/
+        
+        function signUp(){
+            let num = phoneNum.value;
+            let newnum = num.substr(1)
+            var eachUser = {
+                firstname : firstName.value,
+                lastname : lastName.value,
+                email : emailAddress.value,
+                tel : phoneNum.value,
+                password : password.value,
+                dob : dateOfBirth.value,
+                gender : gender.value,
+                pin : pin.value,
+                accNum : newnum
+            }
+            if( eachUser.firstname == "" ||
+                eachUser.lastname == ""||
+                eachUser.email == ""||
+                eachUser.tel == ""||   
+                eachUser.password == ""||
+                eachUser.dob == ""||
+                eachUser.gender == ""||
+                eachUser.pin == "")
+                {
+                    alert("input all details")
+                }else{
+                    console.log(eachUser);
+                    allUsers.push(eachUser)
+                    console.log(allUsers)
+                    localStorage.setItem("localAllUsers",JSON.stringify(allUsers))
+                    window.location.href = `home.html`
+                }
+        }
+
+    </script>
+
+</body>
+<!-- <script src="script.js"></script> -->
+</html>

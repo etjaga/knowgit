@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    border: 5px solid rgb(56, 56, 56);
+    width: 23vw;
+    height: 85vh;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 10px rgb(3, 185, 3), -2px 2px 10px rgb(3, 158, 3), 2px -2px 2px rgb(3, 158, 3), -2px -2px 2px rgb(3, 158, 3);
+    background-color: rgb(42, 224, 42);
+    position: relative;
+}
+.form{
+    overflow-y: scroll;
+    height: 280px;
+}
+::-webkit-scrollbar{
+     width: 20px;
+}
+::-webkit-scrollbar-track{
+    background-color:  rgb(42, 224, 42);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(42, 224, 42);
+}
+.inner{
+    width: 22vw;
+    height: 62vh;
+    margin: auto;
+    border-radius: 30px;
+    background-color: rgb(42, 224, 42);
+}
+h1{
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 28px;
+}
+p{
+    
+    font-weight: 600;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+.name{
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    border: 0;
+    margin-top: 40px;
+}
+input, select{
+    border-radius: 10px;
+    border: 0;
+    margin-top: 10px;
+    height: 40px;
+    width: 255px;
+    outline: 0;
+    font-size: 12px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+button{
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    border: 0;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    background-color: turquoise;
+}
+button:hover{
+    height: 45px;
+    width: 130px;
+    border-radius: 10px;
+    border: 0;
+    align-items: center;
+    background-color: turquoise;
+}
+hr{
+    position: absolute;
+    bottom: 13px;
+    left: 95px;
+    height: 5px;
+    width: 130px;
+    background-color: whitesmoke;
+    border-radius: 50px;
+    border: 0;
+}
+.login{
+    color: blue;
+    font-size: 15px;
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="main">
+        <div style="display: flex; justify-content: center; height: 90px; position: relative;">
+            <p style="bottom: 65px; left: 32px; position: absolute;">21:06</p>
+            <img src="images/battery.png" alt="" style="bottom: 55px; right: 8px; position: absolute; height: 35px; width: 110px;">
+        
+            <div style="display: flex; justify-content: space-between;  width: 134px; position: absolute; height: 26px; bottom: 70px;">
+                <div style="height: 26px; width: 100px; border: thin solid; border-radius: 20px; margin-top: 20px; background-color: rgb(56, 56, 56);"></div>
+                <div style="height: 26px; width: 26px; border: thin solid; border-radius: 20px; margin-top: 20px; background-color: rgb(56, 56, 56);"></div>
+            </div>
+
+        </div>
+        <div class="inner">
+            <h1>Account details</h1>
+                
+            <div style="padding: 0 25px; margin-top: 30px;">
+                <div id="disp">
+                    
+                </div>
+            </div>
+            <a href="home.html">
+                <p class="signup">
+                    BACK HOME
+                </p>
+            </a>    
+                    
+            <hr>
+        </div>
+    </div>
+
+    <script>
+        let allUsers = JSON.parse(localStorage.getItem("localAllUsers"))
+        console.log(eachUser)
+        disp.innerHTML = `<h6>${allUsers[0]}</h6>`
+        // disp.innerHTML =  `<h1>${allUsers[0]}</h1>`
+
+    </script>
+</body>
+</html>

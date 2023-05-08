@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM</title>
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+<body>
+    <div class="main">
+        <div style="display: flex; justify-content: center; height: 90px; position: relative;">
+            <p style="bottom: 65px; left: 32px; position: absolute;">21:06</p>
+            <img src="images/battery.png" alt="" style="bottom: 55px; right: 8px; position: absolute; height: 35px; width: 110px;">
+            <div class="avatar">
+                <a href="profíle.html">
+                    <img src="images/avartar.gif" alt="" class="avatarimage">
+                </a>
+                <p id="userName"></p>
+            </div>
+            <div style="display: flex; justify-content: space-between;  width: 134px; position: absolute; height: 26px; bottom: 70px;">
+                <div style="height: 26px; width: 100px; border: thin solid; border-radius: 20px; margin-top: 20px; background-color: rgb(56, 56, 56);"></div>
+                <div style="height: 26px; width: 26px; border: thin solid; border-radius: 20px; margin-top: 20px; background-color: rgb(56, 56, 56);"></div>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="innerinner">
+                <p class="bal">Total balance</p>
+                <a href="">
+                    <p class="bal">Transaction history  ></p>
+                </a>
+            </div>
+            <h1 id="result">0.00</h1>
+            <div class="buttons">
+                <a href="deposit.html">
+                    <button class="firstbuttons">
+                        <img src="images/facing up.png" alt="" class="firstimage">deposit
+                    </button>
+                </a>
+                <a href="transfer.html">
+                    <button class="firstbuttons">
+                        <img src="images/transfer.png" alt="" class="firstimage">transfer
+                    </button>
+                </a>
+                <a href="withdraw.html">
+                    <button class="firstbuttons">
+                        <img src="images/facing down.png" alt="" class="firstimage">withdraw
+                    </button>
+                </a>
+            </div>
+            <hr>
+        </div>
+
+    </div>    
+    <script>
+        let firstNum = Number(result)
+        localStorage.setItem(`localFirstNum`,JSON.stringify(firstNum))
+        let balance = JSON.parse(localStorage.getItem(`localBalance`))
+        result.innerHTML = `<h4>$${balance}</h4>`
+        localStorage.setItem(`balance`(localBalance))
+
+    </script>
+</body>
+</html>
